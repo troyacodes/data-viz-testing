@@ -7,6 +7,7 @@ const IndexPage = () => (
   <Layout>
     <Link to="/amcharts">Amcharts</Link> <br />
     <Link to="/recharts">Recharts</Link> <br />
+    <Link to="/nivo">Nivo</Link> <br />
   </Layout>
 )
 

@@ -12,6 +12,8 @@ import {
   Area,
 } from "recharts"
 
+import Layout from "../components/layout"
+
 const Recharts = () => {
   const [data, setData] = useState([
     {
@@ -59,7 +61,7 @@ const Recharts = () => {
   ])
 
   return (
-    <Fragment>
+    <Layout>
       <LineChart
         width={500}
         height={200}
@@ -116,7 +118,7 @@ const Recharts = () => {
         <Tooltip />
         <Area type="monotone" dataKey="pv" stroke="#82ca9d" fill="#82ca9d" />
       </AreaChart>
-    </Fragment>
+    </Layout>
   )
 }
 

@@ -1,353 +1,352 @@
 import React, { useState } from "react"
-import { ResponsiveBump } from "@nivo/bump"
+import { ResponsiveLine } from "@nivo/line"
+
+import Layout from "../components/layout"
 
 const Nivo = () => {
   const [data, setData] = useState([
     {
-      id: "Serie 1",
+      id: "japan",
+      color: "hsl(346, 70%, 50%)",
       data: [
         {
-          x: 2000,
-          y: 8,
+          x: "plane",
+          y: 124,
         },
         {
-          x: 2001,
-          y: 8,
+          x: "helicopter",
+          y: 288,
         },
         {
-          x: 2002,
-          y: 6,
+          x: "boat",
+          y: 229,
         },
         {
-          x: 2003,
-          y: 8,
+          x: "train",
+          y: 111,
         },
         {
-          x: 2004,
-          y: 7,
+          x: "subway",
+          y: 33,
+        },
+        {
+          x: "bus",
+          y: 183,
+        },
+        {
+          x: "car",
+          y: 157,
+        },
+        {
+          x: "moto",
+          y: 63,
+        },
+        {
+          x: "bicycle",
+          y: 221,
+        },
+        {
+          x: "horse",
+          y: 226,
+        },
+        {
+          x: "skateboard",
+          y: 31,
+        },
+        {
+          x: "others",
+          y: 256,
         },
       ],
     },
     {
-      id: "Serie 2",
+      id: "france",
+      color: "hsl(116, 70%, 50%)",
       data: [
         {
-          x: 2000,
-          y: 6,
+          x: "plane",
+          y: 145,
         },
         {
-          x: 2001,
-          y: 3,
+          x: "helicopter",
+          y: 78,
         },
         {
-          x: 2002,
-          y: 8,
+          x: "boat",
+          y: 61,
         },
         {
-          x: 2003,
-          y: 4,
+          x: "train",
+          y: 242,
         },
         {
-          x: 2004,
-          y: 2,
+          x: "subway",
+          y: 179,
+        },
+        {
+          x: "bus",
+          y: 84,
+        },
+        {
+          x: "car",
+          y: 31,
+        },
+        {
+          x: "moto",
+          y: 48,
+        },
+        {
+          x: "bicycle",
+          y: 213,
+        },
+        {
+          x: "horse",
+          y: 142,
+        },
+        {
+          x: "skateboard",
+          y: 76,
+        },
+        {
+          x: "others",
+          y: 126,
         },
       ],
     },
     {
-      id: "Serie 3",
+      id: "us",
+      color: "hsl(203, 70%, 50%)",
       data: [
         {
-          x: 2000,
-          y: 1,
+          x: "plane",
+          y: 194,
         },
         {
-          x: 2001,
-          y: 5,
+          x: "helicopter",
+          y: 36,
         },
         {
-          x: 2002,
-          y: 5,
+          x: "boat",
+          y: 246,
         },
         {
-          x: 2003,
-          y: 3,
+          x: "train",
+          y: 238,
         },
         {
-          x: 2004,
-          y: 10,
+          x: "subway",
+          y: 246,
+        },
+        {
+          x: "bus",
+          y: 208,
+        },
+        {
+          x: "car",
+          y: 262,
+        },
+        {
+          x: "moto",
+          y: 128,
+        },
+        {
+          x: "bicycle",
+          y: 62,
+        },
+        {
+          x: "horse",
+          y: 276,
+        },
+        {
+          x: "skateboard",
+          y: 76,
+        },
+        {
+          x: "others",
+          y: 139,
         },
       ],
     },
     {
-      id: "Serie 4",
+      id: "germany",
+      color: "hsl(35, 70%, 50%)",
       data: [
         {
-          x: 2000,
-          y: 3,
+          x: "plane",
+          y: 69,
         },
         {
-          x: 2001,
-          y: 2,
+          x: "helicopter",
+          y: 180,
         },
         {
-          x: 2002,
-          y: 11,
+          x: "boat",
+          y: 213,
         },
         {
-          x: 2003,
-          y: 6,
+          x: "train",
+          y: 201,
         },
         {
-          x: 2004,
-          y: 4,
-        },
-      ],
-    },
-    {
-      id: "Serie 5",
-      data: [
-        {
-          x: 2000,
-          y: 4,
+          x: "subway",
+          y: 88,
         },
         {
-          x: 2001,
-          y: 11,
+          x: "bus",
+          y: 190,
         },
         {
-          x: 2002,
-          y: 1,
-        },
-        {
-          x: 2003,
+          x: "car",
           y: 12,
         },
         {
-          x: 2004,
-          y: 8,
+          x: "moto",
+          y: 17,
+        },
+        {
+          x: "bicycle",
+          y: 34,
+        },
+        {
+          x: "horse",
+          y: 288,
+        },
+        {
+          x: "skateboard",
+          y: 44,
+        },
+        {
+          x: "others",
+          y: 96,
         },
       ],
     },
     {
-      id: "Serie 6",
+      id: "norway",
+      color: "hsl(229, 70%, 50%)",
       data: [
         {
-          x: 2000,
-          y: 7,
+          x: "plane",
+          y: 229,
         },
         {
-          x: 2001,
-          y: 4,
+          x: "helicopter",
+          y: 166,
         },
         {
-          x: 2002,
-          y: 9,
+          x: "boat",
+          y: 276,
         },
         {
-          x: 2003,
-          y: 1,
+          x: "train",
+          y: 38,
         },
         {
-          x: 2004,
-          y: 3,
-        },
-      ],
-    },
-    {
-      id: "Serie 7",
-      data: [
-        {
-          x: 2000,
-          y: 2,
+          x: "subway",
+          y: 47,
         },
         {
-          x: 2001,
-          y: 10,
+          x: "bus",
+          y: 294,
         },
         {
-          x: 2002,
-          y: 2,
+          x: "car",
+          y: 155,
         },
         {
-          x: 2003,
-          y: 9,
+          x: "moto",
+          y: 220,
         },
         {
-          x: 2004,
-          y: 1,
-        },
-      ],
-    },
-    {
-      id: "Serie 8",
-      data: [
-        {
-          x: 2000,
-          y: 12,
+          x: "bicycle",
+          y: 85,
         },
         {
-          x: 2001,
-          y: 9,
+          x: "horse",
+          y: 284,
         },
         {
-          x: 2002,
-          y: 7,
+          x: "skateboard",
+          y: 90,
         },
         {
-          x: 2003,
-          y: 2,
-        },
-        {
-          x: 2004,
-          y: 5,
-        },
-      ],
-    },
-    {
-      id: "Serie 9",
-      data: [
-        {
-          x: 2000,
-          y: 9,
-        },
-        {
-          x: 2001,
-          y: 6,
-        },
-        {
-          x: 2002,
-          y: 4,
-        },
-        {
-          x: 2003,
-          y: 7,
-        },
-        {
-          x: 2004,
-          y: 12,
-        },
-      ],
-    },
-    {
-      id: "Serie 10",
-      data: [
-        {
-          x: 2000,
-          y: 11,
-        },
-        {
-          x: 2001,
-          y: 12,
-        },
-        {
-          x: 2002,
-          y: 12,
-        },
-        {
-          x: 2003,
-          y: 11,
-        },
-        {
-          x: 2004,
-          y: 11,
-        },
-      ],
-    },
-    {
-      id: "Serie 11",
-      data: [
-        {
-          x: 2000,
-          y: 5,
-        },
-        {
-          x: 2001,
-          y: 1,
-        },
-        {
-          x: 2002,
-          y: 10,
-        },
-        {
-          x: 2003,
-          y: 5,
-        },
-        {
-          x: 2004,
-          y: 6,
-        },
-      ],
-    },
-    {
-      id: "Serie 12",
-      data: [
-        {
-          x: 2000,
-          y: 10,
-        },
-        {
-          x: 2001,
-          y: 7,
-        },
-        {
-          x: 2002,
-          y: 3,
-        },
-        {
-          x: 2003,
-          y: 10,
-        },
-        {
-          x: 2004,
-          y: 9,
+          x: "others",
+          y: 204,
         },
       ],
     },
   ])
   return (
-    <div className="container" style={{ height: "500px" }}>
-      <ResponsiveBump
-        data={data}
-        margin={{ top: 40, right: 100, bottom: 40, left: 60 }}
-        colors={{ scheme: "spectral" }}
-        lineWidth={3}
-        activeLineWidth={6}
-        inactiveLineWidth={3}
-        inactiveOpacity={0.15}
-        pointSize={10}
-        activePointSize={16}
-        inactivePointSize={0}
-        pointColor={{ theme: "background" }}
-        pointBorderWidth={3}
-        activePointBorderWidth={3}
-        pointBorderColor={{ from: "serie.color" }}
-        axisTop={{
-          tickSize: 5,
-          tickPadding: 5,
-          tickRotation: 0,
-          legend: "",
-          legendPosition: "middle",
-          legendOffset: -36,
-        }}
-        axisRight={null}
-        axisBottom={{
-          tickSize: 5,
-          tickPadding: 5,
-          tickRotation: 0,
-          legend: "",
-          legendPosition: "middle",
-          legendOffset: 32,
-        }}
-        axisLeft={{
-          tickSize: 5,
-          tickPadding: 5,
-          tickRotation: 0,
-          legend: "ranking",
-          legendPosition: "middle",
-          legendOffset: -40,
-        }}
-      />
-    </div>
+    <Layout>
+      <div className="container" style={{ height: "500px" }}>
+        <ResponsiveLine
+          data={data}
+          margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+          xScale={{ type: "point" }}
+          yScale={{
+            type: "linear",
+            min: "auto",
+            max: "auto",
+            stacked: true,
+            reverse: false,
+          }}
+          axisTop={null}
+          axisRight={null}
+          axisBottom={{
+            orient: "bottom",
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: "transportation",
+            legendOffset: 36,
+            legendPosition: "middle",
+          }}
+          axisLeft={{
+            orient: "left",
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: "count",
+            legendOffset: -40,
+            legendPosition: "middle",
+          }}
+          colors={{ scheme: "nivo" }}
+          pointSize={10}
+          pointColor={{ theme: "background" }}
+          pointBorderWidth={2}
+          pointBorderColor={{ from: "serieColor" }}
+          pointLabel="y"
+          pointLabelYOffset={-12}
+          useMesh={true}
+          legends={[
+            {
+              anchor: "bottom-right",
+              direction: "column",
+              justify: false,
+              translateX: 100,
+              translateY: 0,
+              itemsSpacing: 0,
+              itemDirection: "left-to-right",
+              itemWidth: 80,
+              itemHeight: 20,
+              itemOpacity: 0.75,
+              symbolSize: 12,
+              symbolShape: "circle",
+              symbolBorderColor: "rgba(0, 0, 0, .5)",
+              effects: [
+                {
+                  on: "hover",
+                  style: {
+                    itemBackground: "rgba(0, 0, 0, .03)",
+                    itemOpacity: 1,
+                  },
+                },
+              ],
+            },
+          ]}
+        />
+      </div>
+    </Layout>
   )
 }
 
