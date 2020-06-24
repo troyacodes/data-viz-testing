@@ -1,4 +1,4 @@
-import React, { useState, PureComponent, Fragment } from "react"
+import React from "react"
 import {
   LineChart,
   Line,
@@ -6,7 +6,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   Brush,
   AreaChart,
   Area,
@@ -15,7 +14,7 @@ import {
 import Layout from "../components/layout"
 
 const Recharts = () => {
-  const [data, setData] = useState([
+  const data = [
     {
       name: "Page A",
       uv: 4000,
@@ -58,7 +57,7 @@ const Recharts = () => {
       pv: 4300,
       amt: 2100,
     },
-  ])
+  ]
 
   return (
     <Layout>

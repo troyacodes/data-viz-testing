@@ -1,10 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 import { ResponsiveLine } from "@nivo/line"
 
 import Layout from "../components/layout"
 
 const Nivo = () => {
-  const [data, setData] = useState([
+  const data = [
     {
       id: "japan",
       color: "hsl(346, 70%, 50%)",
@@ -275,7 +275,7 @@ const Nivo = () => {
         },
       ],
     },
-  ])
+  ]
   return (
     <Layout>
       <div className="container" style={{ height: "500px" }}>

@@ -1,8 +1,7 @@
 import React, { useState } from "react"
+import Chart from "react-apexcharts"
 
-import Loadable from "@loadable/component"
-
-import Layout from "../components/layout"
+import Layout from "./layout"
 
 const Apex = () => {
   const [data, setData] = useState({
@@ -69,19 +68,10 @@ const Apex = () => {
 
   return (
     <Layout>
-      <LoadableChart
-        options={options}
-        series={data.series}
-        type="area"
-        height={350}
-      />
+      <Chart options={options} series={data.series} type="area" height={350} />
       <button onClick={handleClick}>click</button>
     </Layout>
   )
 }
 
 export default Apex
-
-const LoadableChart = Loadable(() =>
-  import("../../node_modules/react-apexcharts/src/react-apexcharts")
-)
