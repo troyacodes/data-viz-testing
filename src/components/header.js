@@ -17,18 +17,25 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <h1 style={{ margin: 0 }}>
-        <Link style={{ color: "white" }} to="/amcharts">
+        <Link style={{ color: "white", fontSize: "1.5rem" }} to="/amcharts">
           Amcharts
         </Link>
         <br />
-        <Link style={{ color: "white" }} to="/recharts">
+        <Link style={{ color: "white", fontSize: "1.5rem" }} to="/recharts">
           Recharts
         </Link>
         <br />
-        <Link style={{ color: "white" }} to="/nivo">
+        <Link style={{ color: "white", fontSize: "1.5rem" }} to="/nivo">
           Nivo
         </Link>
         <br />
+        <Link style={{ color: "white", fontSize: "1.5rem" }} to="/chartjs">
+          Chart.js
+        </Link>
+        <br />
+        <Link style={{ color: "white", fontSize: "1.5rem" }} to="/apex">
+          Apex
+        </Link>
       </h1>
     </div>
   </header>
